@@ -1,0 +1,17 @@
+{
+  "name": "paginate.js",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "repository": "https://github.com/geeeger/paginate.js.git",
+  "author": "geeeger <lph1988520@sina.com>",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "cp src/index.js dist/paginate.js",
+    "clean": "rimraf dist/*",
+    "build": "uglifyjs dist/paginate.js -c -m -o dist/paginate.min.js"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "uglify-js": "^2.8.14"
+  }
+}
