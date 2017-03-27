@@ -316,7 +316,8 @@
             if (_isString(key)) {
                 if (value === undefined) {
                     return this.options[key];
-                } else {
+                }
+                else {
                     this.options[key] = value;
                 }
             }
@@ -330,7 +331,8 @@
             var handler = self.handler;
             self.$con.onclick = noop;
             _proxy(self.$con, function (e) {
-                var cname = e.target.className;
+                var cname = e.target.className || '';
+                cname = cname.split(' ')[0];
                 switch (cname) {
                     case 'btn-next':
                         handler.next.call(self);
@@ -341,7 +343,7 @@
                     case 'page':
                         handler.page.call(self, e);
                         break;
-                    case '.btn':
+                    case 'btn':
                         handler.redirect.call(self, e, e.target)
                 }
             }, self);
