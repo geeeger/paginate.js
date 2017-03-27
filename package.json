@@ -6,12 +6,14 @@
   "author": "geeeger <lph1988520@sina.com>",
   "license": "MIT",
   "scripts": {
-    "prebuild": "cp src/index.js dist/paginate.js",
+    "prebuild": "npm run clean && cp src/index.js dist/paginate.js",
     "clean": "rimraf dist/*",
-    "build": "uglifyjs dist/paginate.js -c -m -o dist/paginate.min.js"
+    "build": "uglifyjs dist/paginate.js -c -m -o dist/paginate.min.js",
+    "watch": "watch 'npm run build' src"
   },
   "devDependencies": {
     "rimraf": "^2.6.1",
-    "uglify-js": "^2.8.14"
+    "uglify-js": "^2.8.14",
+    "watch": "^1.0.2"
   }
 }
