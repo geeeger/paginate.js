@@ -246,8 +246,8 @@
             next: true,
             redirect: false,
             redirect_text: 'go',
-            prev_text: '',
-            next_text: '',
+            prev_text: '上一页',
+            next_text: '下一页',
             page_count: 0
         };
 
